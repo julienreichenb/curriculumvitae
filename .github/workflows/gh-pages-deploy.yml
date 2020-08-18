@@ -1,4 +1,3 @@
-name: Deploy to github pages
 on:
   push:
     branches:
@@ -20,6 +19,6 @@ jobs:
 
       - name: Run deploy script
         run: |
-          git config user.name "Your username" && git config user.email "your email"
+          git config user.name "julienreichenb" && git config user.email "julien.reichenbach@hevs.ch"
           npm run gh-pages-deploy
           
