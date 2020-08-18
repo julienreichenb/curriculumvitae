@@ -1,22 +1,33 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome on my new CVs"/>
+    <Navbar :items="items" />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Navbar from './components/menu/Navbar'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Navbar
+  },
+  data() {
+    return {
+      items: [
+        {
+          key: 'first'
+        },
+        {
+          key: 'second'
+        }
+      ]
+    }
   }
 }
 </script>
 
-<style>
+<style lang="scss">
 @import url(https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap);
 
 #app {
@@ -24,7 +35,6 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  color: $txt-color;
 }
 </style>
