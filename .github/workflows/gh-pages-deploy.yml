@@ -22,3 +22,4 @@ jobs:
         run: |
           git config user.name "julienreichenb" && git config user.email "julien.reichenbach@hevs.ch
           npm run gh-pages-deploy
+          
