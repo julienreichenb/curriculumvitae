@@ -1,5 +1,5 @@
 <template>
-    <div id="navbar" class="bg-dark">
+    <div id="navbar" :class="'bg-' + color">
         <img id="me" :src="pic" width="250" />
         <div class="m-4 pb-4 border-bottom border-light">
             <h1 class="display-4 text-info">
@@ -10,8 +10,9 @@
             </h2>
         </div>
         <b-row>
-            <b-col lg="4" 
+            <b-col 
                 class="mt-3 text-info" 
+                lg="4" 
                 v-for="info in infos" 
                 :key="info.id"
             >
@@ -26,7 +27,12 @@
                     </b-col>
                     <b-col md="8" class="text-left">
                         <div>{{ $t(t_key + info.label) }}</div>
-                        <h6 class="font-weight-bold">{{ info.value[0] }}</h6>
+                        <h6 class="font-weight-bold">
+                            {{ info.value[0] }}                        
+                        </h6>
+                        <h6 class="font-weight-bold">
+                            {{ info.value[1] && info.value[1] }}                        
+                        </h6>
                     </b-col>
                 </b-row>
             </b-col>
@@ -37,42 +43,26 @@
 <script>
 import Pic from '@/assets/img/me.png'
 export default {
+    props: {
+        color: { type: String, default: 'danger' },
+        infos: { type: Array, required: true },
+    },
     data() {
         return {
             pic: null,
-            t_key: 'header.',
-            infos: [
-                {
-                    id: 0,
-                    label: "phone",
-                    value: ["(+41) 78 / 203 70 39"],
-                    icon: ["fad", "mobile-alt"],
-                },
-                {
-                    id: 1,
-                    label: "mail",
-                    value: ["julien.reichenb@gmail.com"],                        
-                    icon: ["fad", "envelope-open-text"],
-                },
-                {
-                    id: 2,
-                    label: "address",
-                    value: ["Chemin du Vieux-Canal 42", "1950 Sion"],
-                    icon: ["fad", "mailbox"],
-                },
-            ],
+            t_key: 'header.',            
         }
     },
     mounted() {
-        this.pic = Pic
-    }
+        this.pic = Pic    
+    },
 }
 </script>
 
 <style lang="scss">
 #navbar {
     padding: 10rem;
-    height: calc(100vh - 2 * 2rem);
+    height: 100vh;
 
     img#me {
         padding: 3px;
@@ -104,7 +94,7 @@ export default {
         color: $txt-color;
 
         svg {
-            color: $primary;
+            color: $black;
         }
     }
 }

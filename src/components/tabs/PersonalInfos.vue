@@ -31,68 +31,64 @@
             </b-row>
             <b-row class="mt-5">
                 <b-col lg="3">
-                    <h2 class="border-bottom pb-1">
-                        {{ $t(t_key + contact.t_key + contact.values.pro.title) }}
-                    </h2>
-                    <b-row class="vertical-center my-4" 
-                        v-for="i in contact.values.pro.values" 
-                        :key="i.id"
-                    >
-                        <b-col lg="4" md="2" sm="4">
-                            <b-link v-if="i.url" :href="i.url" target="_blank">
-                                <font-awesome-layers class="fa-3x">
-                                    <font-awesome-icon 
-                                        icon="circle" 
-                                        :color="i.color" 
-                                    />
-                                    <font-awesome-icon 
-                                        icon="circle" 
-                                        color="white" 
-                                       transform="shrink-1"
-                                    />
-                                    <font-awesome-icon 
-                                        :icon="i.icon" 
-                                        :color="i.color"
-                                        transform="shrink-6"
-                                    />                       
-                                </font-awesome-layers>                            
-                            </b-link>
-                            <div v-else>
-                                <font-awesome-icon class="fa-2x" 
-                                    :icon="i.icon" 
-                                    :color="i.color"
-                                />
-                            </div>
-                        </b-col>
-                        <b-col lg="8" md="10" sm="8" class="text-left">
-                            <b-link v-if="i.url" :href="i.url" target="_blank">                                    
-                                <h5>
-                                    {{ i.label }}
-                                </h5>
-                            </b-link>
-                            <div v-else>
-                                <h5>
-                                    <span :class="i.value && 'font-weight-bold'">
-                                        {{ i.label }}
-                                    </span>
-                                    <p class="text-muted" v-if="i.value">
-                                        {{ i.value }}
-                                    </p>
-                                </h5>
-                            </div>
-                        </b-col>              
-                    </b-row>
+                    <PersonalInfoLists :color="color" :list="contact.values.pro" />
+                    <PersonalInfoLists :color="color" :list="contact.values.games" />
+                    <PersonalInfoLists :color="color" :list="contact.values.others" />
                 </b-col>
-                <b-col lg="9">
-                
+                <b-col lg="9" class="pl-5">
+                    <b-card 
+                        :img-src="picCard"
+                        img-alt="Card Image"                    
+                        no-body
+                    >           
+                        <b-card-body>
+                            <h3 class="pb-2 mb-2 border-bottom">{{ $t(t_key + presentation.key + 'title') }}</h3>
+                            <b-card-text 
+                                id="card-presentation"
+                                v-for="p in presentation.p" 
+                                :key="p"
+                                v-html="$t(t_key + presentation.key + p)"
+                            />
+                        </b-card-body>
+                    </b-card>
                 </b-col>
             </b-row>
         </b-container>
         <b-tooltip target="tooltip-birthday" 
             triggers="hover"
-            placement="left"
+            placement="bottomright"
         >
             <BirthdayTimer :countdown="formatCountDown" />
+        </b-tooltip>
+        <b-tooltip target="tooltip-contact" 
+            triggers="hover"
+        >
+            <b-row>
+                <b-col lg="1">
+                    <font-awesome-layers>
+                            <font-awesome-icon
+                                :icon="['fad', 'phone']" 
+                                color="white"
+                            />
+                        </font-awesome-layers>            
+                </b-col>
+                <b-col>
+                    (+41) 78 / 203 70 39
+                </b-col>                
+            </b-row>
+            <b-row>
+                <b-col sm="1">
+                    <font-awesome-layers>
+                            <font-awesome-icon
+                                :icon="['fad', 'envelope']" 
+                                color="skyblue"
+                            />
+                        </font-awesome-layers>            
+                </b-col>
+                <b-col>
+                    julien.reichenb@gmail.com
+                </b-col>
+            </b-row>
         </b-tooltip>
     </div>
 </template>
@@ -100,9 +96,12 @@
 <script>
 import * as moment from 'moment'
 import BirthdayTimer from '../utils/BirthdayTimer'
+import PersonalInfoLists from '../utils/PersonalInfoLists'
+import PicCard from '../../assets/img/card-pic.png'
 export default {
     components: {
-        BirthdayTimer
+        BirthdayTimer,
+        PersonalInfoLists,
     },
     props: {
         color: { type: String, default: 'Red' }
@@ -139,10 +138,11 @@ export default {
     },
     data() {
         return {
+            t_key: 'personal_info.',
             countDown: null,
             birthdate: new Date(1992, 4, 15),
             nextBirthday: moment(new Date().getFullYear() + 1 + '-05-15'),
-            t_key: 'personal_info.',
+            picCard: null,
             infos: {
                 t_key: 'info.',
                 values: [
@@ -183,16 +183,9 @@ export default {
                             {
                                 id: 1,
                                 label: 'GitHub',
-                                icon: ['fab', 'github'],
+                                icon: ['fab', 'github-alt'],
                                 color: '#000000',
                                 url: 'https://github.com/julienreichenb',
-                            },
-                            {
-                                id: 2,
-                                label: 'GitHub',
-                                icon: ['fab', 'github'],
-                                color: '#000000',
-                                value: "Lol",
                             },
                         ]
                     },
@@ -202,7 +195,7 @@ export default {
                             {
                                 id: 0,
                                 label: 'Steam',
-                                icon: ['fab', 'steam'],
+                                icon: ['fab', 'steam-symbol'],
                                 color: '#031549',
                                 url: 'https://steamcommunity.com/profiles/76561198003716292',
                             },
@@ -212,15 +205,39 @@ export default {
                                 value: 'fisherman#2917',
                                 icon: ['fab', 'battle-net'],
                                 color: '#00aeef',                            
-                            }
+                            },
+                        ]
+                    },
+                    others: {
+                        title: 'others',
+                        values: [
+                            {
+                                id: 0,
+                                label: 'Discord',
+                                value: 'fishermanyo#0287',
+                                icon: ['fab', 'discord'],
+                                color: '#7289da',
+                            },
+                            {
+                                id: 1,
+                                label: 'Telegram',
+                                value: '@julienreichenb',
+                                icon: ['fab', 'telegram-plane'],
+                                color: '#0088cc',                            
+                            },
                         ]
                     }
                 }
+            },
+            presentation: {
+                key: 'who_am_i.',
+                p: ['general', 'college', 'hes', 'next'],
             }
         }
     },
     created() {
         this.getAge()
+        this.picCard = PicCard
     },
     methods: {
         getAge() {
@@ -243,4 +260,12 @@ export default {
 .info-elem:last-child {
     border-right: none;
 }
+
+.card {
+    img {
+        filter: grayscale(.65);
+    }
+}
+
+
 </style>

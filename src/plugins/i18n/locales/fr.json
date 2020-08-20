@@ -5,6 +5,9 @@
         "mail": "E-mail",
         "address": "Adresse"
     },
+    "footer": {
+        "app": "Ce CV est conçu avec "
+    },
     "tab": {
         "personal_info": "Infos perso",
         "education": "Formation",
@@ -24,8 +27,15 @@
         },
         "contact": {
             "pro": "Pro",
-            "games": "Gaming"
+            "games": "Gaming",
+            "others": "Autres"
         },
-        "who_am_i": "Qui suis-je ?"
+        "who_am_i": {
+            "title": "Qui suis-je ?",
+            "general": "<strong>Bonjour ! Merci de prendre le temps de parcourir mon CV.</strong> Je m'appelle Julien et je suis Informaticien de Gestion.",
+            "college": "J'ai fait ma scolarité en Valais, notamment au <strong>Lycée-Collège des Creusets</strong> de Sion, en spécialisation Économie/Anglais. J'ai toujours beaucoup lu et aimé l'écriture, c'est pourquoi j'avais tout d'abord l'ambition de devenir <strong>journaliste</strong>. Après avoir fait quelques stages dans la profession, j'ai entamé une formation en <strong>Lettres à l'Université de Fribourg</strong> en 2012 avant de réaliser qu'il était extrêmement difficile de faire son trou dans ce milieu, déjà fortement éprouvé par l'émergence des nouveaux médias. J'ai donc décidé de changer de voie.",
+            "hes": "J'ai travaillé à l'<strong>Hôpital de Sion</strong>, avant de recommencer mes études en 2016. En effet, ayant depuis toujours eu un fort attrait pour tout ce qui touche à l'<strong>informatique</strong>, j'ai décidé d'entreprendre les démarches pour m'inscrire au <strong>Bachelor en Informatique de Gestion de la HES de Sierre</strong>. J'ai obtenu mon diplôme en 2019 et je travaille maintenant aux <strong>instituts Tourisme et Informatique de Gestion</strong> de la HES-SO, en qualité d'<strong>Assistant de Recherche</strong>.",
+            "next": "Apprendre étant pour moi toujours une source de motivation, j'ai pour objectif d'entamer un <strong>Master en Business Administration</strong> en automne 2021, à la HES de Lausanne. Je suis également à la recherche de petits projets à faire en dehors de mon travail. Si vous avez besoin d'un site web, n'hésitez pas à me <strong id='tooltip-contact'>contacter</strong> ;)"
+        }
     }
 }

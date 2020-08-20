@@ -1,12 +1,12 @@
 <template>
-    <b-tabs class="bg-dark" 
+    <b-tabs id="tabs" :class="'bg-' + tabs[current].bootstrap" 
         justified 
         v-model="current"
     >
         <b-tab class="bg-white" 
             v-for="tab in tabs" 
             :key="tab.id"
-            v-on:click.prevent="goToContent"
+            v-on:click="swapColor(tab.bootstrap)"
         >
             <template v-slot:title>
                 <h5 :class="current !== tab.id ? 'text-white' : 'text-dark font-weight-bold'">
@@ -45,52 +45,61 @@ export default {
         Projects,
         Interests
     },
+    mounted() {
+        this.swapColor('danger')
+    },
     data() {
         return {
-            current: null,
+            current: 0,
             tabs: [
                 {
                     id: 0,
                     label: 'personal_info',
                     icon: ['fad', 'user'],
                     color: 'Maroon',
+                    bootstrap: 'danger',
                 },
                 {
                     id: 1,
                     label: 'education',
                     icon: ['fad', 'user-graduate'],
                     color: 'Black',
+                    bootstrap: 'secondary',
                 },
                 {
                     id: 2,
                     label: 'experience',
                     icon: ['fad', 'tools'],
                     color: 'Indigo',
+                    bootstrap: 'primary',
                 },
                 {
                     id: 3,
                     label: 'skills',
                     icon: ['fad', 'tachometer-alt-fast'],
                     color: 'Chocolate',
+                    bootstrap: 'warning',
                 },
                 {
                     id: 4,
                     label: 'projects',
                     icon: ['fad', 'browser'],
                     color: 'SeaGreen',
+                    bootstrap: 'success',
                 },
                 {
                     id: 5,
                     label: 'interests',
                     icon: ['fad', 'gamepad-alt'],
                     color: 'Navy',
+                    bootstrap: 'dark',
                 }
             ]
         }
     },
     methods: {
-        goToContent() {
-            document.getElementById("content").scrollIntoView();
+        swapColor(bootstrap) {
+            this.$emit('change', bootstrap)
         }
     },
 }
