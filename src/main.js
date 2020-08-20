@@ -3,8 +3,6 @@ import App from './App.vue'
 import i18n from "./plugins/i18n/i18n";
 import VueMeta from "vue-meta";
 import { BootstrapVue, BootstrapVueIcons } from "bootstrap-vue";
-import "bootstrap/dist/css/bootstrap.css";
-import "bootstrap-vue/dist/bootstrap-vue.css";
 /* FontAwesome Config */
 import { library } from '@fortawesome/fontawesome-svg-core'
 import {

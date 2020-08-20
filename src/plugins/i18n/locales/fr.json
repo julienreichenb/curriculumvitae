@@ -1,3 +1,31 @@
 {
-    "hello": "Bonjour"
+    "title": "Informaticien de Gestion HES",
+    "header": {
+        "phone": "Téléphone",
+        "mail": "E-mail",
+        "address": "Adresse"
+    },
+    "tab": {
+        "personal_info": "Infos perso",
+        "education": "Formation",
+        "experience": "Expérience",
+        "skills": "Compétences",
+        "projects": "Projets",
+        "interests": "Hobbies"
+    },
+    "personal_info": {
+        "info": {
+            "age": "Âge",
+            "status": "Statut",
+            "couple": "En couple",
+            "driving_licence": "Permis de conduire",
+            "cat_b": "Catégorie B",
+            "years_old": "ans"
+        },
+        "contact": {
+            "pro": "Pro",
+            "games": "Gaming"
+        },
+        "who_am_i": "Qui suis-je ?"
+    }
 }

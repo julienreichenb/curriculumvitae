@@ -8,16 +8,17 @@ $base-color-dark: #d9a004;
 $base-color-darker: #a87b00;
 $base-color-darkest: #3d2d00;
 
-$theme-colors: (
-  "primary": #4679e0,
-  "secondary": #95989e,
-  "success": #5cb85c,
-  "info": #5bc0de,
-  "warning": #f0ad4e,
-  "danger": #ff4136,
-  "dark": #0c1e3b,
-  "light": #b8c5e0
-);
+// Theme color default definitions
+$primary: #4679e0;
+$secondary: #95989e;
+$success: #5cb85c;
+$info: #5bc0de;
+$warning: #f0ad4e;
+$danger: #ff4136;
+$light: #b8c5e0;
+$dark: #0c1e3b;
+
+
 
 // Include Bootstrap and BootstrapVue SCSS files
 @import '~bootstrap/scss/bootstrap.scss';
