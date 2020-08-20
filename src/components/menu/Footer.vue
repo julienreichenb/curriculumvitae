@@ -1,5 +1,5 @@
 <template>
-    <div v-if="false" id="footer" class="text-white text-left" :class="'bg-' + color">
+    <div id="footer" class="text-white text-left" :class="'bg-' + color">
         <small>
             {{ $t(t_key + 'app') }}
             <b-link class="text-white mx-2" href="https://vuejs.org/" target="_blank">
