@@ -25,10 +25,10 @@
                             />
                         </font-awesome-layers>                
                     </b-col>
-                    <b-col md="8" class="text-left">
+                    <b-col md="10" class="text-left">
                         <div>{{ $t(t_key + info.label) }}</div>
                         <h6 class="font-weight-bold">
-                            {{ info.value[0] }}                        
+                                {{ info.value[0] && info.value[0] }}                        
                         </h6>
                         <h6 class="font-weight-bold">
                             {{ info.value[1] && info.value[1] }}                        

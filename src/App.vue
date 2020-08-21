@@ -36,6 +36,7 @@ export default {
             label: "mail",
             value: ["julien.reichenb@gmail.com"],                        
             icon: ["fad", "envelope-open-text"],
+            isMail: true,
         },
         {
             id: 2,
@@ -57,7 +58,7 @@ export default {
       this.color = c
     },
     goTo(id) {
-      document.getElementById(id).scrollIntoView(true);
+      document.getElementById(id).scrollIntoView();
     }
   },
   metaInfo: {

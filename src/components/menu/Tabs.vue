@@ -8,7 +8,7 @@
             class="bg-white" 
             v-for="tab in tabs" 
             :key="tab.id"
-            v-on:click="swapColor(tab.bootstrap)"
+            v-on:click="clickTab(tab.bootstrap)"
         >
             <template v-slot:title>
                 <h5 :class="'text-' + tab.bootstrap">
@@ -99,6 +99,12 @@ export default {
         }
     },
     methods: {
+        clickTab(bootstrap) {
+            this.swapColor(bootstrap)
+            setTimeout(() => {
+                this.goTo('small-header')
+            }, 400)
+        },
         swapColor(bootstrap) {
             this.$emit('change', bootstrap)
         },
