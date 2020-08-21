@@ -61,6 +61,7 @@ export default {
 
 <style lang="scss">
 #navbar {
+    z-index: 100;
     padding: 10rem;
     height: 100vh;
 

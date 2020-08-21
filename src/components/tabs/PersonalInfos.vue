@@ -96,7 +96,7 @@
 <script>
 import * as moment from 'moment'
 import BirthdayTimer from '../utils/BirthdayTimer'
-import PersonalInfoLists from '../utils/PersonalInfoLists'
+import PersonalInfoLists from '../utils/lists/PersonalInfoLists'
 import PicCard from '../../assets/img/card-pic.png'
 export default {
     components: {
@@ -104,7 +104,8 @@ export default {
         PersonalInfoLists,
     },
     props: {
-        color: { type: String, default: 'Red' }
+        color: { type: String, default: 'Red' },
+        bootstrap: { type: String, default: 'danger' },
     },
     computed: {
         getBg() {

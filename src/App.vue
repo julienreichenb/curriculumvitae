@@ -2,7 +2,7 @@
   <div id="app">
     <Header :infos="infos" :color="color" />
     <HeaderSmall :infos="infos" :color="color" />
-    <Tabs @change="swapColor" />
+    <Tabs @change="swapColor" @goto="goTo" />
     <Footer :color="color" />
   </div>
 </template>
@@ -46,24 +46,18 @@ export default {
       ],
     }
   },
-  computed: {
-    isTop() {
-      return window.pageYOffset === 0
-    }
-  },
   mounted() {
-    console.log(window.pageYOffset)
     window.scrollTo(0,0)
     setTimeout(() => {
-      this.goToContent()
+      this.goTo("small-header")
     }, 3000)
   },
   methods: {
     swapColor(c) {
       this.color = c
     },
-    goToContent() {
-      document.getElementById("small-header").scrollIntoView();
+    goTo(id) {
+      document.getElementById(id).scrollIntoView(true);
     }
   },
   metaInfo: {

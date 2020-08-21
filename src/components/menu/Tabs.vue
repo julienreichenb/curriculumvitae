@@ -1,29 +1,30 @@
 <template>
-    <b-tabs id="tabs" :class="'bg-' + tabs[current].bootstrap" 
+    <b-tabs id="tabs"
+        class="bg-white" 
         justified 
         v-model="current"
     >
-        <b-tab class="bg-white" 
+        <b-tab 
+            class="bg-white" 
             v-for="tab in tabs" 
             :key="tab.id"
             v-on:click="swapColor(tab.bootstrap)"
         >
             <template v-slot:title>
-                <h5 :class="current !== tab.id ? 'text-white' : 'text-dark font-weight-bold'">
+                <h5 :class="'text-' + tab.bootstrap">
                     <font-awesome-icon class="mr-3" 
-                        :icon="tab.icon" 
-                        :color="current === tab.id && tab.color"
+                        :icon="tab.icon"
                     />
                     {{ $t('tab.' + tab.label) }}
                 </h5>
             </template>
             <div id="content">
-                <PersonalInfos :color="tabs[current].color" v-if="current === 0" />
-                <Education :color="tabs[current].color" v-else-if="current === 1" />
-                <Experience :color="tabs[current].color" v-else-if="current === 2" />
-                <Skills :color="tabs[current].color" v-else-if="current === 3" />
-                <Projects :color="tabs[current].color" v-else-if="current === 4" />
-                <Interests :color="tabs[current].color" v-else-if="current === 5" />
+                <PersonalInfos :color="tabs[current].color" :bootstrap="tabs[current].bootstrap" v-if="current === 0" />
+                <Education @goto="goTo" :color="tabs[current].color" :bootstrap="tabs[current].bootstrap" v-else-if="current === 1" />
+                <Experience :color="tabs[current].color" :bootstrap="tabs[current].bootstrap" v-else-if="current === 2" />
+                <Skills :color="tabs[current].color" :bootstrap="tabs[current].bootstrap" v-else-if="current === 3" />
+                <Projects :color="tabs[current].color" :bootstrap="tabs[current].bootstrap" v-else-if="current === 4" />
+                <Interests :color="tabs[current].color" :bootstrap="tabs[current].bootstrap" v-else-if="current === 5" />
             </div>
         </b-tab>
     </b-tabs>
@@ -62,7 +63,7 @@ export default {
                 {
                     id: 1,
                     label: 'education',
-                    icon: ['fad', 'user-graduate'],
+                    icon: ['fad', 'file-certificate'],
                     color: 'Black',
                     bootstrap: 'secondary',
                 },
@@ -100,10 +101,16 @@ export default {
     methods: {
         swapColor(bootstrap) {
             this.$emit('change', bootstrap)
+        },
+        goTo(id) {
+            this.$emit('goto', id)
         }
     },
 }
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
+a.active * {
+    font-weight: bolder;
+}
 </style>

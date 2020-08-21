@@ -3,7 +3,22 @@
     "header": {
         "phone": "Téléphone",
         "mail": "E-mail",
-        "address": "Adresse"
+        "address": "Adresse",
+        "lang": {
+            "fr": "Français",
+            "en": "Anglais"
+        },
+        "search_placeholder": "Rechercher ",
+        "search_btn": "Rechercher",
+        "rand": {
+            "skill": "un skill",
+            "comp": "une compétence",
+            "talent": "un talent",
+            "contact": "un contact",
+            "experience": "une expérience",
+            "achievement": "un accomplissement",
+            "diploma": "un diplôme"
+        }
     },
     "footer": {
         "app": "Ce CV est conçu avec "
@@ -36,6 +51,50 @@
             "college": "J'ai fait ma scolarité en Valais, notamment au <strong>Lycée-Collège des Creusets</strong> de Sion, en spécialisation Économie/Anglais. J'ai toujours beaucoup lu et aimé l'écriture, c'est pourquoi j'avais tout d'abord l'ambition de devenir <strong>journaliste</strong>. Après avoir fait quelques stages dans la profession, j'ai entamé une formation en <strong>Lettres à l'Université de Fribourg</strong> en 2012 avant de réaliser qu'il était extrêmement difficile de faire son trou dans ce milieu, déjà fortement éprouvé par l'émergence des nouveaux médias. J'ai donc décidé de changer de voie.",
             "hes": "J'ai travaillé à l'<strong>Hôpital de Sion</strong>, avant de recommencer mes études en 2016. En effet, ayant depuis toujours eu un fort attrait pour tout ce qui touche à l'<strong>informatique</strong>, j'ai décidé d'entreprendre les démarches pour m'inscrire au <strong>Bachelor en Informatique de Gestion de la HES de Sierre</strong>. J'ai obtenu mon diplôme en 2019 et je travaille maintenant aux <strong>instituts Tourisme et Informatique de Gestion</strong> de la HES-SO, en qualité d'<strong>Assistant de Recherche</strong>.",
             "next": "Apprendre étant pour moi toujours une source de motivation, j'ai pour objectif d'entamer un <strong>Master en Business Administration</strong> en automne 2021, à la HES de Lausanne. Je suis également à la recherche de petits projets à faire en dehors de mon travail. Si vous avez besoin d'un site web, n'hésitez pas à me <strong id='tooltip-contact'>contacter</strong> ;)"
+        }
+    },
+    "education": {
+        "diploms": "Diplômes",
+        "udemy": "Formations Udemy",
+        "maturity": {
+            "title": "Maturité Gymnasiale",
+            "location": "Lycée-Collège des Creusets (Sion)",
+            "desc": "Options Économie & Anglais"
+        },
+        "bachelor": {
+            "title": "Bachelor en Informatique de Gestion",
+            "location": "HES-SO Valais/Wallis (Sierre)",
+            "desc": "Axé <strong>Développement</strong> (principalement web) & <strong>Management</strong>. Agilité (SCRUM), Intégration continue, Testing, VCS, ... Plus d'infos sous la section Compétences."
+        },
+        "cisco": {
+            "title": "Cisco CCNA",
+            "location": "Haute École de Gestion (Genève)",
+            "desc": "Routing & Switching (4 certifications), formation théorique et <strong>pratique</strong>. Cours optionnel sur une année (tous les samedis) dans le cadre de la HES."
+        },
+        "master": {
+            "title": "Master en Management des Systèmes d'Information",
+            "location": "HES-SO (Lausanne)",
+            "desc": "Début programmé en 2021."
+        },
+        "vue_php": {
+            "title": "Laravel and Vue.js - Fullstack Web Development (2020)",
+            "desc": "Découverte du framework <strong>PHP Laravel</strong> (artisan, Blade, MVC, ...) pour le backend, en combinaison avec <strong>Vuejs</strong> (notion de components, axios, router, ...) pour le frontend."
+        },
+        "django_python": {
+            "title": "Django & Python | Maitrisez le développement web",
+            "desc": "Introduction aux principes du language <strong>Python</strong> et développement fullstack / déploiement avec le framework <strong>Django</strong>. Utilisation et paramétrisation de l'app <strong>Admin</strong> native de Django et création d'une app Blog, avec <strong>Bootstrap</strong>"
+        },
+        "react": {
+            "title": "REACT 2020 par la pratique, de A à Z (évolution progressive)",
+            "desc": "Introduction à la librairie <strong>React</strong> (state, axios, components vs containers, routing, ...) et création de 4 applications, en combinaison avec <strong>Bootstrap</strong>."
+        },
+        "r": {
+            "title": "Apprendre la Data Science avec R",
+            "desc": "Introduction au language <strong>R</strong> et aux librairies <strong>dplyr</strong> & <strong>ggplot2</strong>, pour la transformation et la visualisation de données."
+        },
+        "yii": {
+            "title": "Learning Path: Yii 2: Design Applications with PHP",
+            "desc": "Découverte du framework PHP <strong>Yii 2</strong>. Création d'une application fullstack."
         }
     }
 }

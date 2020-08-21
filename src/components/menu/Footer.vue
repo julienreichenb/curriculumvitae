@@ -1,5 +1,8 @@
 <template>
-    <div id="footer" class="text-white text-left" :class="'bg-' + color">
+    <div id="footer" class="text-white d-flex justify-content-between align-items-center" :class="'bg-' + color">
+        <small>
+            <em>Last update @ August 2020</em>
+        </small>
         <small>
             {{ $t(t_key + 'app') }}
             <b-link class="text-white mx-2" href="https://vuejs.org/" target="_blank">
@@ -38,6 +41,7 @@ export default {
 
 <style lang="scss">
 #footer {
+    z-index: 10000;
     width: 100%;
     padding: .6rem 3rem;
     position: fixed;
