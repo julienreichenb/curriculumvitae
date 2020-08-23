@@ -2,6 +2,7 @@ import Vue from 'vue'
 import App from './App.vue'
 import i18n from "./plugins/i18n/i18n";
 import VueMeta from "vue-meta";
+import Vue2Filters from 'vue2-filters'
 import { BootstrapVue, BootstrapVueIcons } from "bootstrap-vue";
 /* FontAwesome Config */
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -35,6 +36,8 @@ Vue.use(BootstrapVueIcons);
 Vue.use(VueMeta, {
   refreshOnceOnNavigation: true,
 });
+
+Vue.use(Vue2Filters)
 
 new Vue({
   i18n,

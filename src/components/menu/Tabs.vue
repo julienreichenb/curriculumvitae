@@ -20,7 +20,7 @@
             </template>
             <div id="content">
                 <PersonalInfos :color="tabs[current].color" :bootstrap="tabs[current].bootstrap" v-if="current === 0" />
-                <Education @goto="goTo" :color="tabs[current].color" :bootstrap="tabs[current].bootstrap" v-else-if="current === 1" />
+                <Education :color="tabs[current].color" :bootstrap="tabs[current].bootstrap" v-else-if="current === 1" />
                 <Experience :color="tabs[current].color" :bootstrap="tabs[current].bootstrap" v-else-if="current === 2" />
                 <Skills :color="tabs[current].color" :bootstrap="tabs[current].bootstrap" v-else-if="current === 3" />
                 <Projects :color="tabs[current].color" :bootstrap="tabs[current].bootstrap" v-else-if="current === 4" />

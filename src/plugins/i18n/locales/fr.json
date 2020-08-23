@@ -96,5 +96,31 @@
             "title": "Learning Path: Yii 2: Design Applications with PHP",
             "desc": "Découverte du framework PHP <strong>Yii 2</strong>. Création d'une application fullstack."
         }
+    },
+    "skills": {
+        "lang": {
+            "fr": "Français",
+            "de": "Allemand",
+            "en": "Anglais",
+            "mother": "Langue maternelle",
+            "a1": "A1",
+            "a2": "A2",
+            "b1": "B1",
+            "b2": "B2",
+            "c1": "C1",
+            "c2": "C2"
+        },
+        "coding": {
+            "title": "Languages"
+        },
+        "frameworks": {
+            "title": "Frameworks"
+        },
+        "other_techs": {
+            "title": "Autres compétences"
+        },
+        "soft_skills": {
+            "title": "Soft Skills"
+        }
     }
 }
