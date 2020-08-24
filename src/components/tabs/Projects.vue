@@ -81,7 +81,7 @@ export default {
                     name: 'RADHY',
                     t_key: 'radhy.',
                     tech: ['VueJs', 'Adonisjs', 'PostgreSQL', 'Leaflet'],
-                    tags: ['Water Management', 'Ecology', 'Website Redesign'],
+                    tags: ['Water Management', 'Ecology', 'GIS', 'Fullstack', 'Data Visualization'],
                     url: 'http://vlhgislab.hevs.ch:8081/',
                     img: '',
                 },
