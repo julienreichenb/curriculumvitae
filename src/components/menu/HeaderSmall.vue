@@ -13,35 +13,20 @@
             v-for="info in infos" 
             :key="info.id"
         >
-            <b-nav-text v-if="!info.isMail" :class="'text-' + color" class="font-weight-bold">
+            <b-nav-item :href="info.isMail && 'mailto:' + info.value[0]" 
+                :class="info.isMail ? 'hoverable' : 'not-hoverable'" 
+            >
                 <font-awesome-icon
-                    class="fa-2x mr-3"
-                    :icon="info.icon"
-                />
-                <span>{{ info.value[0] }}</span>
-            </b-nav-text>
-            <b-nav-item v-if="info.isMail" :href="'mailto:' + info.value[0]">
-                <font-awesome-icon
-                    class="fa-2x mr-3"
+                    class="fa-2x mr-2"
                     :class="'text-' + color"
                     :icon="info.icon"
                 />
                 <span :class="'text-' + color" class="font-weight-bold">
-                    {{ info.value[0] }}
+                    {{ info.value && (info.t ? $t(t_key + info.value[0]) : info.value[0]) }}
                 </span>
             </b-nav-item>
         </b-navbar-nav>
         <b-navbar-nav class="ml-auto">
-            <b-nav-form>
-                <b-form-input 
-                    class="mr-sm-2" 
-                    v-model="searchedWord"
-                    :placeholder="$t(t_key + 'search_placeholder') + getRandomTxt()" 
-                />
-                <b-button :variant="'outline-' + color" @click="search">
-                    {{ $t(t_key + 'search_btn') }}
-                </b-button>
-            </b-nav-form>
             <b-nav-item-dropdown class="ml-3" right>
                 <template slot="button-content">
                     <font-awesome-icon
@@ -134,12 +119,16 @@ export default {
         border-radius: 10px;
     }
 
-    a:hover {
+    .hoverable:hover {
         background: $txt-color;
 
         * {
             color: $light !important;
         }
+    }
+
+    .not-hoverable * {
+        cursor: default;
     }
 }
 </style>

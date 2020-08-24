@@ -44,6 +44,13 @@ export default {
             value: ["Chemin du Vieux-Canal 42", "1950 Sion"],
             icon: ["fad", "mailbox"],
         },
+        {
+            id: 3,
+            label: "references",
+            value: ["ondemand"],
+            t: true,
+            icon: ["fad", "user-tie"],
+        },
       ],
     }
   },

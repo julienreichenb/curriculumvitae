@@ -4,6 +4,8 @@
         "phone": "Téléphone",
         "mail": "E-mail",
         "address": "Adresse",
+        "references": "Références",
+        "ondemand": "Sur demande",
         "lang": {
             "fr": "Français",
             "en": "Anglais"
@@ -154,7 +156,8 @@
             "1": "Création & conception de sites webs, avec plusieurs langages et frameworks",
             "2": "Data scrambling et création de visualisations",
             "3": "Mise en place de serveurs web, déploiement de sites et applications",
-            "4": "Aide à la rédaction d'articles scientifiques"
+            "4": "Aide à la rédaction d'articles scientifiques",
+            "5": "Cours d'User eXperience aux classes de Bachelor"
         },
         "mhavie": {
             "title": "Plateforme Mhavie",
@@ -186,6 +189,35 @@
             "location": "Manor, Sion",
             "1": "Acitivtés de caisse",
             "2": "Soutien à l'équipe de vente"
+        }
+    },
+    "projects": {
+        "title": "Quelques projets cools auxquels j'ai contribués",
+        "subtitle": "Certaines plateformes sont malheureusement confidentielles, et donc inaccessibles.",
+        "technologies": "Technologies",
+        "mhavie": {
+            "title": "Du formulaire papier à un système centralisé",
+            "desc": "Mhavie est une méthodologie permettant de déterminer le <strong>niveau de réalisation de personnes en situation de handicap</strong>, selon leur âge. L'objectif est de quantifier les facultés des personnes évaluées dans différents domaines (social, culturel, professionnel, ...), en donnant également la possibilité d'indiquer un niveau de satisfaction. La combinaison de ces facteurs donne un score, qui permet d'assurer un <strong>suivi cohérent et bienveillant</strong> par le professionnel de santé, tout en gardant en vue des objectifs à long terme. Initialement sous la forme d'un fichier Excel et de formulaires papier, une plateforme web était devenue nécessaire pour conserver, agréger et visualiser les données.<br /><br />Mhavie a débuté comme projet d'étudiant; j'ai par la suite proposé au manager du projet, M. Julien Torrent d'IAT Lab, de poursuivre le développement de Mhavie après la deadline officielle. Après plusieurs itérations, le cahier des charges initial touchait au but et le produit a été livré aux clients."
+        },
+        "vasco": {
+            "title": "Génération de graphiques & annotations : comment créer des connaissances en collaborant ?",
+            "desc": "Mon <strong>premier projet</strong> en tant qu'Assistant de Recherche ! J'ai bénéficié d'une grande autonomie et d'une bonne marge de manoeuvre pour implémenter Vasco (pour Assisted <strong>V</strong>isualization Generation Platform for <strong>A</strong>nali<strong>s</strong>ing Data <strong>Co</strong>llaboratively). Le projet émane d'un travail de Master d'une étudiante de l'université de Fribourg. La plateforme poursuit deux objectifs : <strong>1)</strong> générer semi-automatiquement des graphiques à partir de jeux de données (Excel, csv, ...), pour que des utilisateurs peu expérimentés puissent visualiser leurs données sans connaissance approfondies d'outils tels que Tableau et <strong>2)</strong> d'annoter les graphiques produits en mettant en évidence certaines zones, pour stimuler la <strong>collaboration</strong> et éventuellement dégager des pistes d'analyse.<br /><br />Vasco est en ligne sur un serveur de la HES-SO (voir lien) et est parfois utilisé par notre équipe pour jeter un rapide coup d'oeil sur des données. Ses fonctionnalités vont notamment être reprises dans un <strong>projet d'imagerie médicale</strong>, en collaboration avec le CHUV."
+        },
+        "divoc": {
+            "title": "SwissCovid avant l'heure",
+            "desc": "diVoc prend ses origines dans un <strong>hackathon</strong> organisé par la HES-SO dans le cadre de la pandémie de covid-19. En effet, au vu des potentielles répercussions sanitaires et économiques du virus, l'école s'est immédiatement positionnée comme un acteur important, en proposant des solutions innovantes et en finançant des <strong>projets à court terme</strong>, comme diVoc.<br /><br />À l'instar de SwissCovid, l'application vise à détecter via le Bluetooth (Google Nearby) des rapprochements à risque entre des utilisateurs. Toutefois, diVoc propose en plus un système de <strong>gamification</strong> tout en garantissant la vie privée des utilisateurs. L'application est disponible sur le PlayStore de Google, mais son développement a été mis en stand-by par la release de SwissCovid."
+        },
+        "opoint": {
+            "title": "Réseau social, rencontres, marché à l'emploi : un travail de Bachelor en faveur des personnes en situation de handicap",
+            "desc": "Mon <strong>travail de Bachelor</strong>, en collaboration avec l'IAT Lab (le même Lab que pour le projet Mhavie). Visant tout d'abord à créer une sorte de 'Tinder' qui favoriserait les rencontres entre des personnes en situation de handicap. Après avoir recherché des solutions existantes et avoir déterminé un <strong>protocol d'interview</strong>, je suis allé au contact de potentiels futurs utilisateurs pour déterminer leurs réels besoins. A contrario des suppositions initiales, il s'est avéré que les besoins s'orientaient bien plus fortement vers une <strong>bourse à l'emploi</strong><br /><br />Ayant sélectionné ce travail dans le but de m'entrainer au développement web, j'ai finalement été poussé hors de ma zone de confort... pour mon plus grand bénéfice ! À la fois pour la dimension humaine, mais également pour les <strong>connaissances en design</strong> que j'ai acquises, O-Point m'a ouvert des perspectives professionnelles que je n'avais pas envisagées plus tôt dans mon cursus."
+        },
+        "tourobs": {
+            "title": "Coup de jeune pour l'Observatoire du Tourisme",
+            "desc": "Ayant décidé de rapatrier le site de l'Observatoire sur ses propres serveurs, l'Institut Tourisme m'a chargé de <strong>concevoir et développer le nouveau site</strong>. Destiné à du blogging et à servir de vitrine pour les dashboard développés par l'institut, le nouveau site poursuivait plusieurs objectifs : <strong>1)</strong> pouvoir réutiliser les articles déjà existants sur l'ancienne plateforme, <strong>2)</strong> satisfaire les standards UX tant pour la partie visiteur que pour la partie rédacteur et <strong>3)</strong> poser des bases saines pour la refonte de la partie 'data'.<br /><br />J'ai développé le site seul et l'ETL pour la compatibilité avec l'ancienne base de données seul, avec le <strong>CMS Umbraco</strong> et les outils de Visual Studio. Tourobs a pu faire peau neuve et la nouvelle interface a été saluée par l'équipe de l'Observatoire.<br /><br />J'ai également débuté la refonte du site <a href='https://data.tourobs.ch' target='_blank'>Data Tourobs</a>, en y incluant VueJs (ancienne version en ligne pour le moment). Retardé par la pandémie, le déploiement du nouveau Tourobs est prévu pour septembre 2020."
+        },
+        "radhy": {
+            "title": "Premiers pas en GIS",
+            "desc": "J'ai découvert le <strong>GIS et PostgreSQL</strong> avec le projet RADHY. Ne disposant que d'une quarantaine d'heures pour me former au GIS, mais aussi concevoir, développer et déployer la plateforme... C'était sportif ! Et pourtant, le projet RAHDY, en collaboration avec une équipe de chercheurs du sud-est de la France, s'avère prometteur. À partir des simulations générées par nos collègues français, je suis chargé de la visualisation des données pour mieux comprendre et anticiper les pénuries d'eau du bassin versant du Buech.<br /><br />Actuellement dans sa version 1.0, le développement de la plateforme RADHY devrait se poursuivre et être présentée à d'importants <strong>acteurs locaux</strong>, également confrontés à des enjeux hydrologiques."
         }
     }
 }

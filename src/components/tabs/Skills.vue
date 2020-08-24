@@ -1,9 +1,9 @@
 <template>
     <b-container fluid class="pb-5">
-        <b-alert show dismissible>
+        <LangsLists :list="lang" :tkey="t_key" />
+        <b-alert show fade dismissible>
             <span v-html="$t(t_key + 'alert')" />
         </b-alert>
-        <LangsLists :list="lang" :tkey="t_key" />
         <b-tabs id="skills"
             vertical 
             v-model="current"
@@ -84,7 +84,7 @@ export default {
                             label: 'Javascript',
                             level: 85,
                             icon: ['fab', 'js'],
-                            color: '#f7df1e',
+                            color: '#f5c907',
                         },
                         {
                             id: 2,

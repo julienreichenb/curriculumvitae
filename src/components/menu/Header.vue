@@ -12,7 +12,7 @@
         <b-row>
             <b-col 
                 class="mt-3 text-info" 
-                lg="4" 
+                lg="3" 
                 v-for="info in infos" 
                 :key="info.id"
             >
@@ -27,12 +27,14 @@
                     </b-col>
                     <b-col md="10" class="text-left">
                         <div>{{ $t(t_key + info.label) }}</div>
-                        <h6 class="font-weight-bold">
-                                {{ info.value[0] && info.value[0] }}                        
-                        </h6>
-                        <h6 class="font-weight-bold">
-                            {{ info.value[1] && info.value[1] }}                        
-                        </h6>
+                        <div v-if="info.value">
+                            <h6 class="font-weight-bold">
+                                    {{ info.value[0] && (info.t ? $t(t_key + info.value[0]) : info.value[0]) }}                        
+                            </h6>
+                            <h6 class="font-weight-bold">
+                                {{ info.value[1] && info.value[1] }}                        
+                            </h6>
+                        </div>
                     </b-col>
                 </b-row>
             </b-col>

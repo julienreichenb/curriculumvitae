@@ -1,6 +1,6 @@
 <template>
     <div>
-        <b-row class="my-5 pt-5 border-top"
+        <b-row class="my-4 pb-4 border-bottom"
             v-for="e in list" 
             :key="e.id" 
         >

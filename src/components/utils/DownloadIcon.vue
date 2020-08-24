@@ -1,6 +1,7 @@
 <template>
     <a :href="item.pdf" :download="'JulienReichenbach-' + item.t_key">
-        <font-awesome-icon class="fa-4x download-icon" 
+        <font-awesome-icon class="download-icon" 
+            :class="'fa-' + size"
             :icon="icon"
             :color="iconColor"
             @mouseover="overing"
@@ -12,7 +13,8 @@
 <script>
 export default {
     props: {
-        item: { type: Object, required: true }
+        item: { type: Object, required: true },
+        size: { type: String, default: '4x' },
     },
     data() {
         return {
