@@ -70,6 +70,7 @@ export default {
 
 <style lang="scss">
 @import url(https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap);
+
 @font-face {
   font-family: "Calculator";
   src: local("Calculator"),
@@ -77,7 +78,7 @@ export default {
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: smooth !important;
 }
 
 #app {

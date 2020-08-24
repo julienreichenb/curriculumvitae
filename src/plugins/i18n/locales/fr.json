@@ -47,7 +47,7 @@
         },
         "who_am_i": {
             "title": "Qui suis-je ?",
-            "general": "<strong>Bonjour ! Merci de prendre le temps de parcourir mon CV.</strong> Je m'appelle Julien et je suis Informaticien de Gestion.",
+            "general": "<strong>Bonjour ! Merci de prendre le temps de parcourir mon CV.</strong> Je m'appelle Julien et je suis Informaticien de Gestion. J'aime principalement le <strong>développement web</strong> et j'aime beaucoup travailler avec <strong>VueJs</strong> !",
             "college": "J'ai fait ma scolarité en Valais, notamment au <strong>Lycée-Collège des Creusets</strong> de Sion, en spécialisation Économie/Anglais. J'ai toujours beaucoup lu et aimé l'écriture, c'est pourquoi j'avais tout d'abord l'ambition de devenir <strong>journaliste</strong>. Après avoir fait quelques stages dans la profession, j'ai entamé une formation en <strong>Lettres à l'Université de Fribourg</strong> en 2012 avant de réaliser qu'il était extrêmement difficile de faire son trou dans ce milieu, déjà fortement éprouvé par l'émergence des nouveaux médias. J'ai donc décidé de changer de voie.",
             "hes": "J'ai travaillé à l'<strong>Hôpital de Sion</strong>, avant de recommencer mes études en 2016. En effet, ayant depuis toujours eu un fort attrait pour tout ce qui touche à l'<strong>informatique</strong>, j'ai décidé d'entreprendre les démarches pour m'inscrire au <strong>Bachelor en Informatique de Gestion de la HES de Sierre</strong>. J'ai obtenu mon diplôme en 2019 et je travaille maintenant aux <strong>instituts Tourisme et Informatique de Gestion</strong> de la HES-SO, en qualité d'<strong>Assistant de Recherche</strong>.",
             "next": "Apprendre étant pour moi toujours une source de motivation, j'ai pour objectif d'entamer un <strong>Master en Business Administration</strong> en automne 2021, à la HES de Lausanne. Je suis également à la recherche de petits projets à faire en dehors de mon travail. Si vous avez besoin d'un site web, n'hésitez pas à me <strong id='tooltip-contact'>contacter</strong> ;)"
@@ -98,6 +98,7 @@
         }
     },
     "skills": {
+        "alert": "Les échelles données sont purement <strong>subjectives</strong> et représentent surtout mon expérience et mon intérêt dans les domaines en question !",
         "lang": {
             "fr": "Français",
             "de": "Allemand",
@@ -111,16 +112,80 @@
             "c2": "C2"
         },
         "coding": {
-            "title": "Languages"
+            "title": "Languages",
+            "c#": "Asp.Net, EntityFramework & LinQ, API, ...",
+            "r": "Data Scrambling with dplyr, Data Visualization with ggplot2",
+            "sql": "MySQL, Microsoft SQL, PostgreSQL, SQLite, ..."
         },
         "frameworks": {
-            "title": "Frameworks"
+            "title": "Frameworks",
+            "vuejs": "Nuxt, Vuetify, Axios, Store, Components vs Pages, ...",
+            "reactjs": "Axios, State, Components vs Containers, ...",
+            "shopify": "Avec Stripe, Checkout-X",
+            "nodejs": "Express, Sequelize, PostgreSQL, AdonisJS"
         },
         "other_techs": {
-            "title": "Autres compétences"
+            "title": "Autres compétences",
+            "userexperience": "Garret's 5S Framework, interviews utilisateurs, design de frames, ...",
+            "datavisualization": "Vega, Vega-Lite, Chartjs, Google Charts, R & ggplot2",
+            "servermanagement": "Ubuntu avec Apache/nginx, Windows Server",
+            "projectmanagement": "SCRUM Framework & Artifacts, Lean Management",
+            "network": "Formation Cisco CCNA, Routing & Switching",
+            "gis": "PostGIS, geoJson avec Leaflet, création de visualisations",
+            "machinelearning": "Usage basique de Knime"
         },
         "soft_skills": {
-            "title": "Soft Skills"
+            "title": "Soft Skills",
+            "selfdevelopment": "Développement personnel",
+            "positivecommunication": "Communication positive",
+            "networking": "Networking",
+            "fastlearner": "Facilité à apprendre",
+            "teambuilding": "Team Building",
+            "skillshare": "Partage de connaissance",
+            "flexibility": "Flexibilité"
+        }
+    },
+    "experiences": {
+        "today": "aujourd'hui",
+        "to": "à",
+        "hes": {
+            "title": "Assistant de Recherche - 100%",
+            "location": "HES-SO Valais/Wallis, Sierre",
+            "1": "Création & conception de sites webs, avec plusieurs langages et frameworks",
+            "2": "Data scrambling et création de visualisations",
+            "3": "Mise en place de serveurs web, déploiement de sites et applications",
+            "4": "Aide à la rédaction d'articles scientifiques"
+        },
+        "mhavie": {
+            "title": "Plateforme Mhavie",
+            "location": "IAT Lab, Sierre",
+            "desc": "Projet de la HES, continué après mes études en marge de mon activité principale. Implémentation d'une méthode d'évaluation pour personnes en situation de handicap (plus d'info sous la section Projets).",
+            "1": "Adaptation d'une solution existante aux besoins spécifiques de Mhavie",
+            "2": "Implémentation des calculs pour le scoring",
+            "3": "Conception d'un Dashboard administrateur et de visualisations, pour suivre l'évolution des personnes évaluées",
+            "4": "Développement itératif, suivant les principes Agile"
+        },
+        "hopital_sion": {
+            "title": "Collaborateur administratif - 100%",
+            "location": "Hôpital Cantonal, Sion",
+            "desc": "Poste occupé en vue de débuter mon Bachelor, qui avait pour condition un an d'expérience dans l'administration.",
+            "1": "Préparation et archivage de dossiers médicaux",
+            "2": "Rédaction de procès verbaux et diverses tâches administratives",
+            "3": "Soutien à la cheffe de divison Gestion Médico-Économique"
+        },
+        "nouvelliste": {
+            "title": "Journaliste stagiaire - 100%",
+            "location": "Locaux du Nouvelliste, Sion",
+            "1": "Rédaction en autonomie d'articles sur des événements locaux",
+            "2": "Interviews de personnalités locales",
+            "3": "Investigations menées seul, dans le cadre d'une enquête sur un corps diplomatique étranger"
+        },
+        "manor": {
+            "title": "Hôte de caisse",
+            "desc": "Aux rayons jouets & sport. À 100% aux Noëls 2012-2013, sinon à temps partiel",
+            "location": "Manor, Sion",
+            "1": "Acitivtés de caisse",
+            "2": "Soutien à l'équipe de vente"
         }
     }
 }

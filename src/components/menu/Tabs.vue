@@ -5,13 +5,14 @@
         v-model="current"
     >
         <b-tab 
-            class="bg-white" 
             v-for="tab in tabs" 
             :key="tab.id"
             v-on:click="clickTab(tab.bootstrap)"
         >
             <template v-slot:title>
-                <h5 :class="'text-' + tab.bootstrap">
+                <h5
+                    :class="getTitleClass(tab)"
+                >
                     <font-awesome-icon class="mr-3" 
                         :icon="tab.icon"
                     />
@@ -105,6 +106,12 @@ export default {
                 this.goTo('small-header')
             }, 400)
         },
+        getTitleClass(tab) {
+            if(tab.id === this.current)
+                return 'font-weight-bold text-' + tab.bootstrap
+            else
+                return 'text-' + tab.bootstrap
+        },
         swapColor(bootstrap) {
             this.$emit('change', bootstrap)
         },
@@ -118,5 +125,9 @@ export default {
 <style scoped>
 a.active * {
     font-weight: bolder;
+}
+#content {
+    padding: 2em 10rem;
+    min-height: 85vh;
 }
 </style>

@@ -64,7 +64,6 @@ export default {
     data() {
         return {
             t_key: 'education.',
-            path: process.env.BASE_URL,
             current: 0,
             diplomas: [
                 {
@@ -77,14 +76,14 @@ export default {
                     id: 2,
                     t_key: "bachelor.",
                     date: "2019",
-                    pdf: '.pdf',
+                    pdf: true,
                     over: true,
                 },
                 {
                     id: 1,
                     t_key: "cisco.",
                     date: "2018",
-                    pdf: '.pdf',
+                    pdf: true,
                     over: true,
                 },
                 {
@@ -133,22 +132,5 @@ export default {
             ]
         }
     },
-    mounted() {
-        this.loadPdfs()
-    },
-    methods: {
-        loadPdfs() {
-            this.diplomas.forEach((d) => {
-                if(d.pdf)
-                    d.pdf = this.path + 'pdf/' + d.t_key + 'pdf'
-            });
-        },
-    },
 }
 </script>
-
-<style lang="scss">
-#education {
-    padding: 2em 10rem;
-}
-</style>

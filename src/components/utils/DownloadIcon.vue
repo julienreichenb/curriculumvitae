@@ -18,7 +18,11 @@ export default {
         return {
             iconColor: 'darkred',
             icon: ['fad', 'file-pdf'],
+            path: process.env.BASE_URL,
         }
+    },
+    mounted() {
+        this.loadPdf()
     },
     methods: {
         overing() {
@@ -29,7 +33,10 @@ export default {
             this.iconColor = 'darkred'
             this.icon = ['fad', 'file-pdf']
         },
-    }
+        loadPdf() {
+            this.item.pdf = this.path + 'pdf/' + this.item.t_key + 'pdf'        
+        },
+    },
 }
 </script>
 
