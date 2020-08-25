@@ -60,36 +60,6 @@
         >
             <BirthdayTimer :countdown="formatCountDown" />
         </b-tooltip>
-        <b-tooltip target="tooltip-contact" 
-            triggers="hover"
-        >
-            <b-row>
-                <b-col lg="1">
-                    <font-awesome-layers>
-                            <font-awesome-icon
-                                :icon="['fad', 'phone']" 
-                                color="white"
-                            />
-                        </font-awesome-layers>            
-                </b-col>
-                <b-col>
-                    (+41) 78 / 203 70 39
-                </b-col>                
-            </b-row>
-            <b-row>
-                <b-col sm="1">
-                    <font-awesome-layers>
-                            <font-awesome-icon
-                                :icon="['fad', 'envelope']" 
-                                color="skyblue"
-                            />
-                        </font-awesome-layers>            
-                </b-col>
-                <b-col>
-                    julien.reichenb@gmail.com
-                </b-col>
-            </b-row>
-        </b-tooltip>
     </div>
 </template>
 

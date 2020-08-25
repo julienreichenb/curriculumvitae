@@ -219,5 +219,19 @@
             "title": "Premiers pas en GIS",
             "desc": "J'ai découvert le <strong>GIS et PostgreSQL</strong> avec le projet RADHY. Ne disposant que d'une quarantaine d'heures pour me former au GIS, mais aussi concevoir, développer et déployer la plateforme... C'était sportif ! Et pourtant, le projet RAHDY, en collaboration avec une équipe de chercheurs du sud-est de la France, s'avère prometteur. À partir des simulations générées par nos collègues français, je suis chargé de la visualisation des données pour mieux comprendre et anticiper les pénuries d'eau du bassin versant du Buech.<br /><br />Actuellement dans sa version 1.0, le développement de la plateforme RADHY devrait se poursuivre et être présentée à d'importants <strong>acteurs locaux</strong>, également confrontés à des enjeux hydrologiques."
         }
+    },
+    "interests": {
+        "gaming": {
+            "title": "Jeux vidéo",
+            "desc": "Gamer depuis tout jeune, j'ai toujours été attiré par l'<strong>aspect compétitif</strong> des jeux vidéo. J'ai longtemps joué à haut niveau sur <strong>World of Warcraft</strong>, me plaçant même Top 2 mondial en Mythic+ à la saison 7.2, avant de me replier sur des jeux moins chronophages comme <strong>Counter Strike</strong>, <strong>Overwatch</strong>, <strong>Age of Empire II</strong>, <strong>Hearthstone</strong>... Je joue encore actuellement régulièrement à la plupart de ces jeux, lorsque j'ai du temps libre. Dans le même registre, je suis aussi un consommateur régulier de contenus <strong>Twitch</strong> ou <strong>Youtube</strong>."
+        },
+        "sport": {
+            "title": "Sport",
+            "desc": "J'ai fait partie dans mon adolescence du <strong>Cercle des Nageurs de Sion</strong>, et j'ai ensuite totalement arrêté le sport durant de nombreuses années. Après un véritable déclic, je me suis lancé intensivement dans la <strong>natation</strong> et le <strong>fitness</strong> durant environ 3 ans. À cause de mes études, j'ai du réduire la cadence. J'aime aussi explorer la Suisse en <strong>randonnée</strong>, <strong>accrobranche</strong> et autres activités de plein air."
+        },
+        "read": {
+            "title": "Lecture & Culture",
+            "desc": "Mon intérêt pour le journalisme n'est pas apparu par hasard. Durant mes trajets en train, j'ai longtemps eu pour habitude de lire des <strong>essais</strong> ou des <strong>romans fantastiques</strong>, ce qui a développé en moi un très fort intérêt pour la politique. J'aime me renseigner sur l'<strong>actualité</strong> et les débats houleux ! De nature curieuse, j'ai aussi tendance à m'intéresser à à peu près n'importe quel sujet : de la nutrition en passant par la biologie, j'adore me cultiver."
+        }
     }
 }

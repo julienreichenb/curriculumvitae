@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
-import i18n from "./plugins/i18n/i18n";
+import i18n from "./plugins/i18n";
+import router from "./router";
 import VueMeta from "vue-meta";
 import Vue2Filters from 'vue2-filters'
 import { BootstrapVue, BootstrapVueIcons } from "bootstrap-vue";
@@ -32,14 +33,24 @@ Vue.config.productionTip = false
 
 Vue.use(BootstrapVue);
 Vue.use(BootstrapVueIcons);
+Vue.use(Vue2Filters)
 
 Vue.use(VueMeta, {
   refreshOnceOnNavigation: true,
 });
 
-Vue.use(Vue2Filters)
+router.beforeEach((to, from, next) => {
+  // i18n language setup
+  let language = to.params.lang;
+  if (!language) {
+    language = "fr";
+  }
+  i18n.locale = language;
+  next();
+});
 
 new Vue({
   i18n,
+  router,
   render: h => h(App),
 }).$mount('#app')

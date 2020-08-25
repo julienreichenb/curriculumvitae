@@ -35,13 +35,13 @@
                         :icon="['fad', 'globe']"
                     />
                 </template>
-                <b-dropdown-item href="#">
-                    <img :src="frPic" width="25" />
-                    {{ $t(t_key + 'lang.fr') }}
-                </b-dropdown-item>
-                <b-dropdown-item href="#">
-                    <img :src="enPic" width="25" />
-                    {{ $t(t_key + 'lang.en') }}
+                <b-dropdown-item 
+                    v-for="(lang, i) in $i18n.availableLocales" 
+                    :key="`Lang${i}`"
+                    @click.prevent="setLocale(lang)"
+                >
+                    <img :src="pics[i]" width="25" />
+                    {{ $t(t_key + 'lang.' + lang) }}
                 </b-dropdown-item>
             </b-nav-item-dropdown>
       </b-navbar-nav>
@@ -62,36 +62,24 @@ export default {
         return {
             t_key: 'header.',
             pic: null,
-            frPic: null,
-            enPic: null,
-            labels: [
-                "skill", 
-                "comp", 
-                "talent", 
-                "contact",  
-                "experience", 
-                "achievement",
-                "diploma",
-            ],
-            searchedWord: null,
+            pics: [null, null],                   
         }
     },
     mounted() {
         this.pic = Pic
-        this.frPic = FR
-        this.enPic = EN
+        this.pics[1] = FR
+        this.pics[0] = EN
     },
     methods: {
         scrollTop() {
             window.scrollTo(0,0)
-        },
-        getRandomTxt() {
-            const r = Math.floor(Math.random() * (this.labels.length)); 
-            return this.$t(this.t_key + 'rand.' + this.labels[r])
-        },
-        search() {
-            console.log(this.searchedWord)
-        },
+        },       
+        setLocale(lang) {
+            this.$i18n.locale = lang;
+            this.$router.push({
+                params: { lang }
+        });
+    }
     }
 }
 </script>

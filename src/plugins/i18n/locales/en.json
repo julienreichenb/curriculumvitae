@@ -1,3 +1,237 @@
 {
-    "hello": "Hello"
+    "title": "Information Technology Management - HES",
+    "header": {
+        "phone": "Phone",
+        "mail": "Mail",
+        "address": "Address",
+        "references": "References",
+        "ondemand": "On request",
+        "lang": {
+            "fr": "French",
+            "en": "English"
+        },
+        "search_placeholder": "Search ",
+        "search_btn": "Search",
+        "rand": {
+            "skill": "a skill",
+            "comp": "a skill",
+            "talent": "a talent",
+            "contact": "a contact",
+            "experience": "an experience",
+            "achievement": "an accomplishment",
+            "diploma": "a degree"
+        }
+    },
+    "footer": {
+        "app": "This CV is designed with "
+    },
+    "tab": {
+        "personal_info": "Personal info",
+        "education": "Training",
+        "experience": "Experience",
+        "skills": "Skills",
+        "projects": "Projects",
+        "interests": "Hobbies"
+    },
+    "personal_info": {
+        "info": {
+            "age": "Age",
+            "status": "Status",
+            "couple": "In couple",
+            "driving_licence": "Driving license",
+            "cat_b": "Category B",
+            "years_old": "years"
+        },
+        "contact": {
+            "pro": "Pro",
+            "games": "Gaming",
+            "others": "Others"
+        },
+        "who_am_i": {
+            "title": "Who am I?",
+            "general": "<strong>Hello! Thank you for taking the time to browse through my CV.</strong> My name is Julien and I'm an IT Management Specialist. I mainly like <strong>web development</strong> and I really enjoy working with <strong>VueJs</strong> !",
+            "college": "I did my schooling in Valais, notably at the Lycée-Collège des Creusets in Sion, specializing in Economics and English. I have always read a lot and loved writing, that's why I first had the ambition to become a <strong>journalist</strong>. After doing a few internships in the profession, I started a training in <strong>Letters at the University of Fribourg</strong> in 2012 before realizing that it was extremely difficult to make one's mark in this field, already strongly affected by the emergence of new media. I therefore decided to change my path",
+            "hes": "I worked at the <strong> Hospital of Sion, before starting my studies again in 2016. Indeed, having always had a strong attraction for everything related to <strong>informatics</strong>, I decided to take the steps to enroll in the <strong>Bachelor's degree in Management Informatics at the HES of Sierre</strong>. I graduated in 2019 and I am now working at the <strong> Tourism and Management Informatics institutes of the HES-SO, as <strong> Research Assistant</strong>",
+            "next": "Since learning is always a source of motivation for me, my goal is to start a Master's degree in Business Administration in autumn 2021 at the University of Applied Sciences in Lausanne. I am also looking for small projects to do outside of my work. If you need a website, please feel free to contact me <strong id='tooltip-contact'>contact</strong>;)"
+        }
+    },
+    "education": {
+        "diploms": "Diplomas",
+        "udemy": "Udemy trainings",
+        "maturity": {
+            "title": "Gymnasium Maturity",
+            "location": "Lycée-Collège des Creusets (Sion)",
+            "desc": "Economy & English Options"
+        },
+        "bachelor": {
+            "title": "Bachelor in Business Informatics",
+            "location": "HES-SO Valais/Wallis (Sierre)",
+            "desc": "Axis <strong>Development</strong> (mainly web) & <strong>Management</strong>. Agility (SCRUM), Continuous Integration, Testing, VCS, ... More info under the Skills section"
+        },
+        "cisco": {
+            "title": "Cisco CCNA",
+            "location": "Haute École de Gestion (Geneva)",
+            "desc": "Routing & Switching (4 certifications), theoretical training and <strong>practical</strong>. Optional course over one year (every Saturday) as part of the HES"
+        },
+        "master": {
+            "title": "Master in Information Systems Management",
+            "location": "HES-SO (Lausanne)",
+            "desc": "Start programmed in 2021."
+        },
+        "vue_php": {
+            "title": "Laravel and Vue.js - Fullstack Web Development (2020)",
+            "desc": "Discovery of the framework <strong>PHP Laravel>/strong> (artisan, Blade, MVC, ...) for the backend, in combination with <strong>Vuejs</strong> (notion of components, axios, router, ...) for the frontend."
+        },
+        "django_python": {
+            "title": "Django & Python | Master the web development",
+            "desc": "Introduction to the principles of the <strong>Python</strong> language and fullstack development / deployment with the <strong>Django</strong> framework. Use and parameterization of the <strong>Admin</strong> app native to Django and creation of a Blog app, with <strong>Bootstrap</strong>"
+        },
+        "react": {
+            "title": "REACT 2020 through practice, from A to Z (progressive evolution)",
+            "desc": "Introduction to the library <strong>React</strong> (state, axios, components vs containers, routing, ...) and creation of 4 applications, in combination with <strong>Bootstrap</strong>."
+        },
+        "r": {
+            "title": "Learning Data Science with R",
+            "desc": "Introduction to the language <strong>R</strong> and the libraries <strong>dplyr</strong> & <strong>ggplot2</strong>, for data transformation and visualization."
+        },
+        "yii": {
+            "title": "Learning Path: Yii 2: Design Applications with PHP",
+            "desc": "Discovery of the PHP framework <strong>Yii 2</strong>. Creation of a fullstack application."
+        }
+    },
+    "skills": {
+        "alert": "The given scales are purely <strong>subjective</strong> and represent my experience and interest in the fields in question!",
+        "lang": {
+            "fr": "French",
+            "de": "German",
+            "en": "English",
+            "mother": "Mother tongue",
+            "a1": "A1",
+            "a2": "A2",
+            "b1": "B1",
+            "b2": "B2",
+            "c1": "C1",
+            "c2": "C2"
+        },
+        "coding": {
+            "title": "Languages",
+            "C#": "Asp.Net, EntityFramework & LinQ, API, ...",
+            "r": "Data Scrambling with dplyr, Data Visualization with ggplot2",
+            "sql": "MySQL, Microsoft SQL, PostgreSQL, SQLite, ..."
+        },
+        "frameworks": {
+            "title": "Frameworks",
+            "vuejs": "Nuxt, Vuetify, Axios, Store, Components vs Pages, ...",
+            "reactjs": "Axios, State, Components vs Containers, ...",
+            "shopify": "With Stripe, Checkout-X",
+            "nodejs": "Express, Sequelize, PostgreSQL, AdonisJS"
+        },
+        "other_techs": {
+            "title": "Other skills",
+            "userexperience": "Garret's 5S Framework, user interviews, frame design, ...",
+            "datavisualization": "Vega, Vega-Lite, Chartjs, Google Charts, R & ggplot2",
+            "servermanagement": "Ubuntu with Apache/nginx, Windows Server",
+            "projectmanagement": "SCRUM Framework & Artifacts, Lean Management",
+            "network": "Cisco CCNA, Routing & Switching Training",
+            "gis": "PostGIS, geoJson with Leaflet, creation of visualizations",
+            "machine learning": "Basic use of Knime"
+        },
+        "soft_skills": {
+            "title": "Soft Skills",
+            "selfdevelopment": "Personal development",
+            "positivecommunication": "Positive communication",
+            "networking": "Networking",
+            "fastlearner": "Easy to learn",
+            "teambuilding": "Team Building",
+            "skillshare": "Sharing knowledge",
+            "flexibility": "Flexibility"
+        }
+    },
+    "experiences": {
+        "today": "today",
+        "to": "à",
+        "hes": {
+            "title": "Search Wizard - 100%",
+            "location": "HES-SO Valais/Wallis, Sierre",
+            "1": "Creation & design of websites, with several languages and frameworks",
+            "2": "Data scrambling and creation of visualizations",
+            "3": "Setting up web servers, deploying sites and applications",
+            "4": "Help in writing scientific articles",
+            "5": "User eXperience Course at Bachelor's level"
+        },
+        "mhavie": {
+            "title": "Platform Mhavie",
+            "location": "IAT Lab, Sierre",
+            "desc": "Project of the HES, continued after my studies on the fringe of my main activity. Implementation of an evaluation method for people with disabilities (more info under the Projects section)",
+            "1": "Adaptation of an existing solution to the specific needs of Mhavie",
+            "2": "Implementation of calculations for scoring",
+            "3": "Design of an administrator Dashboard and visualizations, to follow the evolution of the people evaluated",
+            "4": "Iterative development, following Agile principles"
+        },
+        "hopital_sion": {
+            "title": "Administrative staff - 100%",
+            "location": "Cantonal Hospital, Sion",
+            "desc": "Position occupied in order to start my Bachelor's degree, which was conditional on one year's experience in administration",
+            "1": "Preparation and archiving of medical records",
+            "2": "Drafting of minutes and various administrative tasks",
+            "3": "Support to the Head of the Medical-Economic Management Division"
+        },
+        "novelist": {
+            "title": "Trainee Journalist - 100%",
+            "location": "Locaux du Nouvelliste, Sion",
+            "1": "Autonomous writing of articles on local events",
+            "2": "Interviews with local personalities",
+            "3": "Investigations conducted alone, as part of an investigation of a foreign diplomatic corps"
+        },
+        "manor": {
+            "title": "Cash host",
+            "desc": "In the toys & sports department. 100% at Christmas 2012-2013, otherwise part-time",
+            "location": "Manor, Sion",
+            "1": "Cash register activities",
+            "2": "Sales team support"
+        }
+    },
+    "projects": {
+        "title": "Some cool projects I've contributed to",
+        "subtitle": "Some platforms are unfortunately confidential, and therefore inaccessible",
+        "technologies": "Technologies",
+        "mhavie": {
+            "title": "From paper forms to a centralized system",
+            "desc": "Mhavie is a methodology to determine the <strong> level of achievement of people with disabilities</strong>, according to their age. The objective is to quantify the faculties of the persons evaluated in different fields (social, cultural, professional, ...), giving also the possibility to indicate a level of satisfaction. The combination of these factors results in a score, which ensures a consistent and caring <strong> follow-up by the health professional, while keeping in mind long-term objectives. Initially in the form of an Excel file and paper forms, a web platform had become necessary to store, aggregate and visualize the data.<br /><br />Mhavie started as a student project; I then proposed to the project manager, Mr. Julien Torrent from IAT Lab, to continue the development of Mhavie after the official deadline. After several iterations, the initial specifications were close to completion and the product was delivered to the customers"
+        },
+        "vasco": {
+            "title": "Graph & annotation generation: how to create knowledge by collaborating",
+            "desc": "My <strong>first project</strong> as Research Assistant! I had a great autonomy and a good leeway to implement Vasco (for Assisted <strong>V</strong>isualization Generation Platform for <strong>A</strong>nali<strong>s</strong>ing Data <strong>Co</strong>llaboratively). The project comes from a Master's thesis by a student of the University of Fribourg. The platform pursues two objectives: <strong>1)</strong> to generate semi-automatically graphs from data sets (Excel, csv, ...), so that inexperienced users can visualize their data without extensive knowledge of tools such as Table and <strong>2)</strong> to annotate the graphs produced by highlighting certain areas, to stimulate the <strong>collaboration</strong> and possibly identify avenues of analysis.<br /><br />Vasco is on line on a HES-SO server (see link) and is sometimes used by our team to take a quick look at data. Its functionalities will notably be included in a <strong> medical imaging project, in collaboration with the CHUV."
+        },
+        "divoc": {
+            "title": "SwissCovid ahead of time",
+            "desc": "diVoc has its origins in a <strong>hackathon>/strong> organized by the HES-SO in the context of the covid-19 pandemic. Indeed, in view of the potential health and economic repercussions of the virus, the school immediately positioned itself as an important player, by proposing innovative solutions and financing <strong> short-term projects, such as diVoc.<br /> Following the example of SwissCovid, the application aims to detect via Bluetooth (Google Nearby) risky connections between users. However, diVoc offers in addition a system of <strong>gamification</strong> while guaranteeing the privacy of users. The application is available on Google's PlayStore, but its development has been put on standby by the release of SwissCovid"
+        },
+        "opoint": {
+            "title": "Social network, encounters, job market: a Bachelor's work in favor of people with disabilities",
+            "desc": "My <strong>Bachelor's work>/strong>, in collaboration with the IAT Lab (the same Lab as for the Mhavie project). The first aim is to create a kind of 'Tinder' that would encourage meetings between people with disabilities. After searching for existing solutions and determining a <strong>interview protocol, I went in contact with potential future users to determine their real needs. Contrary to the initial assumptions, it turned out that the needs were much more strongly oriented towards a <strong> job exchange</strong><br /> Having selected this job in order to train myself in web development, I was finally pushed out of my comfort zone... for my greatest benefit! Both for the human dimension, but also for the <strong> knowledge in design</strong> that I acquired, O-Point opened up professional perspectives that I had not considered earlier in my curriculum."
+        },
+        "tourobs": {
+            "title": "A new lease of life for the Tourism Observatory",
+            "desc": "Having decided to repatriate the Observatory site to its own servers, the Tourism Institute asked me to design and develop the new site. Intended for blogging and to serve as a showcase for the dashboards developed by the institute, the new site had several objectives: <strong>1)</strong> to be able to reuse the articles already existing on the old platform, <strong>2)</strong> to meet UX standards for both the visitor and the editor part and <strong>3)</strong> to lay a sound basis for the redesign of the 'data' part.<I developed the site alone and the ETL for compatibility with the old database alone, with the Umbraco CMS Umbraco/Strong and the Visual Studio tools. Tourobs was able to make a new look and the new interface was welcomed by the Observatory team.<br /> I also started the redesign of the site <a href='https://data.tourobs.ch' target='_blank'>Data Tourobs</a>, including VueJs (old online version for the moment). Delayed by the pandemic, the deployment of the new Tourobs is planned for September 2020."
+        },
+        "radhy": {
+            "title": "First steps in GIS",
+            "desc": "I discovered the <strong>GIS and PostgreSQL</strong> with the RADHY project. Having only about forty hours to train myself in GIS, but also to design, develop and deploy the platform... It was sporty! And yet, the RAHDY project, in collaboration with a team of researchers from the South-East of France, is proving to be promising. Based on simulations generated by our French colleagues, I am in charge of data visualization to better understand and anticipate water shortages in the Buech catchment area.<br /><br /> Currently in its version 1.0, the development of the RADHY platform should continue and be presented to important <strong> local actors, also facing hydrological issues."
+        }
+    },
+    "interests": {
+        "gaming": {
+            "title": "Video games",
+            "desc": "As a gamer since I was young, I've always been attracted to the strong>competitive aspect of video games. I played for a long time at a high level on <strong>World of Warcraft</strong>, even placing me Top 2 in the world in Mythic+ in season 7.2, before falling back on less time-consuming games like <strong>Counter Strike</strong>, <strong>Overwatch</strong>, <strong>Age of Empire II</strong>, <strong>Hearthstone</strong>... I still play most of these games regularly nowadays, when I have free time. In the same vein, I'm also a regular consumer of <strong>Twitch</strong> or <strong>Youtube</strong>."
+        },
+        "sport": {
+            "title": "Sport",
+            "desc": "As a teenager, I was part of the <strong>Cercle des Nageurs de Sion</strong>, and then I totally stopped playing the sport for many years. After a real breakthrough, I started intensively in <strong>swimming</strong> and <strong>fitness</strong> for about 3 years. Because of my studies, I had to reduce the pace. I also like to explore Switzerland by <strong> hiking/hiking, <strong> hanging up trees and other outdoor activities."
+        },
+        "read": {
+            "title": "Reading & Culture",
+            "desc": "My interest in journalism didn't come about by chance. During my train journeys, I used to read <strong> essays</strong> or <strong> fantasy novels</strong> for a long time, which developed in me a very strong interest in politics. I like to learn about <strong>current events</strong> and stormy debates! Being curious by nature, I also tend to be interested in just about any subject: from nutrition to biology, I love to learn about culture"
+        }
+    }
 }
