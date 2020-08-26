@@ -77,6 +77,9 @@ export default {
 
 <style lang="scss">
 @import url(https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap);
+@import '~bootstrap/scss/_functions';
+@import '~bootstrap/scss/_variables';
+@import '~bootstrap/scss/mixins/_breakpoints';
 
 @font-face {
   font-family: "Calculator";

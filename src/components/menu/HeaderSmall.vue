@@ -2,14 +2,14 @@
    <b-navbar id="small-header" 
         class="bg-white" 
         sticky
-        toggleable="lg"
     >
     <b-navbar-brand class="mr-5" v-on:click="scrollTop">
         <img :src="pic" alt="me" width="70" />
     </b-navbar-brand>
+
     <b-collapse id="nav-text-collapse" is-nav>
         <b-navbar-nav 
-            class="mx-3"
+            class="mx-3 mx-md-2 small-nav"
             v-for="info in infos" 
             :key="info.id"
         >
@@ -20,7 +20,7 @@
                     class="fa-2x mr-2"
                     :class="'text-' + color"
                     :icon="info.icon"
-                />
+                />                 
                 <span :class="'text-' + color" class="font-weight-bold">
                     {{ info.value && (info.t ? $t(t_key + info.value[0]) : info.value[0]) }}
                 </span>
@@ -115,8 +115,26 @@ export default {
         }
     }
 
+    .small-nav {
+        font-size: .9rem;
+    }
+
     .not-hoverable * {
         cursor: default;
+    }
+
+    @include media-breakpoint-down(lg) {
+        padding: .7rem 1.5rem;
+
+        .small-nav {
+            font-size: .7rem !important;
+        }
+    }
+    
+    @include media-breakpoint-down(md) {
+        .small-nav {
+            display: none !important;
+        }
     }
 }
 </style>

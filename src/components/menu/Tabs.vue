@@ -122,12 +122,24 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 a.active * {
     font-weight: bolder;
 }
 #content {
-    padding: 2em 10rem;
+    padding: 2em 7rem;
     min-height: 85vh;
+
+    @include media-breakpoint-down(lg) {
+        padding: 2em 4rem;
+    }
+
+    @include media-breakpoint-down(md) {
+        padding: 1.8em 3rem;
+    }
+
+    @include media-breakpoint-down(sm) {
+        padding: 1em 1.5rem;
+    }
 }
 </style>
