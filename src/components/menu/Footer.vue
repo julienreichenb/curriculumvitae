@@ -47,5 +47,15 @@ export default {
     position: fixed;
     bottom: 0;
     right: 0;
+
+    @include media-breakpoint-down(sm) {
+        padding: .4rem 1.5rem;
+        font-size: .8rem;
+        position: relative;
+
+        img {
+            width: 15px;
+        }
+    }
 }
 </style>
