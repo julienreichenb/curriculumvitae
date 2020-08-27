@@ -114,6 +114,7 @@ export default {
             padding: 2px;
             width: 190px;
             margin-bottom: 10px;
+            filter: grayscale(0);
         }
 
         .display-4 {
