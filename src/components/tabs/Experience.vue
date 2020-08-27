@@ -1,6 +1,6 @@
 <template>
     <b-container fluid class="pt-4 pb-5 text-left"> 
-        <ExperiencesLists :list="experiences" :tkey="t_key" />
+        <ExperiencesLists :list="experiences" :tkey="t_key" :isMobile="isMobile" />
     </b-container>
 </template>
 
@@ -17,6 +17,7 @@ export default {
     data() {
         return {
             t_key: 'experiences.',
+            isMobile: false,
             experiences: [
                 {
                     id: 4,
@@ -55,5 +56,14 @@ export default {
             ]
         }
     },
+    mounted () {
+        this.onResize()
+        window.addEventListener('resize', this.onResize, { passive: true })
+    },
+    methods: {
+        onResize () {
+            this.isMobile = window.innerWidth < 950
+        }
+    }
 }
 </script>

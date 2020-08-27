@@ -1,9 +1,10 @@
 <template>
-    <b-card class="mb-5"
+    <b-card class="mb-5 interest-card"
         :img-src="require('@/assets/img/interests/' + item.t_key + 'png')"
-        :img-left="isEven ? true : false"
-        :img-right="!isEven ? true : false"
-        img-height="300"
+        :img-top="isMobile"
+        :img-left="!isMobile ? (isEven ? true : false) : false"
+        :img-right="!isMobile ? (!isEven ? true : false) : false"
+        :img-height="isMobile ? '150' : '350'"
         no-body
     >
         <b-card-body>
@@ -18,7 +19,14 @@ export default {
     props: {
         tkey: { type: String, required: true },
         item: { type: Object, required: true },
-        isEven: { type: Boolean, default: true }
+        isEven: { type: Boolean, default: true },
+        isMobile: { type: Boolean, default: true },
     },
 }
 </script>
+
+<style lang="scss">
+.interest-card img {
+    object-fit: cover;
+}
+</style>

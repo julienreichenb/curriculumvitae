@@ -142,4 +142,22 @@ a.active * {
         padding: 1em 1.5rem;
     }
 }
+
+@include media-breakpoint-down(lg) {
+    h5 {
+        font-size: 1rem;
+    }
+}
+
+@include media-breakpoint-down(md) {
+    h5 {
+        font-size: 1rem;
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    h5 {
+        font-size: 1rem;
+    }
+}
 </style>

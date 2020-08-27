@@ -1,17 +1,18 @@
 <template>
     <b-container fluid class="pb-5">
-        <LangsLists :list="lang" :tkey="t_key" />
         <b-alert show fade dismissible>
             <span v-html="$t(t_key + 'alert')" />
         </b-alert>
+        <LangsLists :list="lang" :tkey="t_key" />
         <b-tabs id="skills"
-            vertical 
+            :vertical="!isMobile" 
             v-model="current"
+            fill
             :active-nav-item-class="'text-bold text-white bg-' + bootstrap"
         >
-            <b-tab class="px-5" v-for="skill in skills" :key="skill.id">
+            <b-tab :class="!isMobile ? 'px-5' : 'px-2'" v-for="skill in skills" :key="skill.id">
                 <template v-slot:title>
-                    <div class="d-flex justify-content-between align-items-center p-2">
+                    <div class="d-flex justify-content-between align-items-center p-2 skill-tab">
                         <div>
                             <font-awesome-icon 
                                 class="mr-2"
@@ -27,7 +28,7 @@
                         </b-badge>
                     </div>
                 </template>
-                <SkillsLists :list="skill.values" :tkey="[t_key, skill.t_key]" :color="color" />
+                <SkillsLists :list="skill.values" :tkey="[t_key, skill.t_key]" :color="color" :isMobile="isMobile" />
             </b-tab>
         </b-tabs>
     </b-container>
@@ -48,6 +49,7 @@ export default {
     data() {
         return {
             t_key: 'skills.',
+            isMobile: false,
             current: 0,
             lang: [
                 {
@@ -374,5 +376,22 @@ export default {
             ],
         }
     },
+    mounted () {
+        this.onResize()
+        window.addEventListener('resize', this.onResize, { passive: true })
+    },
+    methods: {
+        onResize () {
+            this.isMobile = window.innerWidth < 1200
+        }
+    },    
 }
 </script>
+
+<style lang="scss">
+@include media-breakpoint-down(lg) {
+    .skill-tab {
+        font-size: .9rem;
+    }
+}
+</style>

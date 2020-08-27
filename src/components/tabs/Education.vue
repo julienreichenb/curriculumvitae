@@ -1,7 +1,7 @@
 <template>
     <b-container fluid class="pt-4 pb-5 text-left">
         <b-tabs id="education"
-            vertical 
+            :vertical="!isMobile"
             v-model="current"
             :active-nav-item-class="'text-bold text-white bg-' + bootstrap"
         >
@@ -23,7 +23,7 @@
                         </b-badge>
                     </div>
                 </template>
-                <DiplomsLists :list="diplomas" :tkey="t_key" />
+                <DiplomsLists :class="isMobile && 'mt-5'" :list="diplomas" :tkey="t_key" :isMobile="isMobile" />
             </b-tab>
             <b-tab class="px-5">
                 <template v-slot:title>
@@ -43,7 +43,7 @@
                         </b-badge>
                     </div>
                 </template>
-                <UdemyLists :list="udemy" :tkey="t_key" />
+                <UdemyLists :class="isMobile && 'mt-5'" :list="udemy" :tkey="t_key" :isMobile="isMobile" />
             </b-tab>
         </b-tabs>
     </b-container>
@@ -64,6 +64,7 @@ export default {
     data() {
         return {
             t_key: 'education.',
+            isMobile: false,
             current: 0,
             diplomas: [
                 {
@@ -130,6 +131,15 @@ export default {
                     color: "#4f5b93",
                 }, 
             ]
+        }
+    },
+    mounted () {
+        this.onResize()
+        window.addEventListener('resize', this.onResize, { passive: true })
+    },
+    methods: {
+        onResize () {
+            this.isMobile = window.innerWidth < 1400
         }
     },
 }

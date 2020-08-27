@@ -2,11 +2,11 @@
     <div>
         <div class="d-flex justify-content-between align-items-center">
             <h2>
-            {{ $t(tkey + 'udemy') }}
+                {{ $t(tkey + 'udemy') }}
             </h2>
             <small class="text-muted font-italic">
                 <a href="https://www.udemy.com/" target="_blank">
-                    &rarr; Udemy Site
+                    &rarr; Udemy <span v-if="!isMobile">Site</span>
                 </a>
             </small>
         </div>
@@ -18,6 +18,7 @@
                 <h4 class="font-weight-bold">
                     <font-awesome-icon 
                         class="fa-4x"
+                        :class="isMobile && 'mb-3'"
                         :icon="d.icon"
                         :color="d.color"
                     />
@@ -42,6 +43,7 @@ export default {
     props: {
         list: { type: Array, default: null },
         tkey: { type: String, default: null },
+        isMobile: { type: Boolean, default: false },
     }
 }
 </script>

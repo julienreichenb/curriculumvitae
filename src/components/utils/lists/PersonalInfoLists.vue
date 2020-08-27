@@ -3,11 +3,12 @@
         <h2 class="border-bottom pb-1 font-weight-bold" :style="{ color }">
             {{ $t(key + list.title) }}
         </h2>
-        <b-row class="vertical-center my-4" 
+        <b-row class="vertical-center no-gutters my-4 my-2-sm" 
             v-for="i in list.values" 
             :key="i.id"
+
         >
-            <b-col lg="4" md="2" sm="4">
+            <b-col xl="4" lg="4" md="6" sm="4">
                 <b-link v-if="i.url" :href="i.url" target="_blank">
                     <font-awesome-layers class="fa-3x">
                         <font-awesome-icon 
@@ -45,7 +46,7 @@
                     </font-awesome-layers>      
                 </div>
             </b-col>
-            <b-col lg="8" md="10" sm="8" class="text-left">
+            <b-col xl="8" lg="8" md="6" sm="8" class="text-left info-link">
                 <b-link 
                     class="text-dark"
                     v-if="i.url" 
@@ -89,4 +90,12 @@ export default {
 a > h5 {
     color: $txt-color;
 }
+
+@include media-breakpoint-down(sm) {
+    .info-link {
+        text-align: center !important;
+        margin-top: .4rem;
+    }
+}
+
 </style>

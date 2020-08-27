@@ -7,7 +7,7 @@
             v-for="p in projects" 
             :key="p.id"
         >
-            <b-col lg="4" class="pr-5">
+            <b-col lg="4" class="project-title">
                 <div class="d-flex justify-content-between">
                     <a v-if="p.url" :href="p.url" target="_blank">
                         <h3 class="font-weight-bold">
@@ -20,7 +20,7 @@
                 </div>
                 <img v-if="p.img" :src="getImg(p)" />
             </b-col>
-            <b-col class="pl-5" :lg="p.pdf ? '7' : '8'">
+            <b-col class="project-body" :lg="p.pdf ? '7' : '8'">
                 <h5 class="font-weight-bold" v-html="$t(t_key + p.t_key + 'title')" />
                 <h6 v-html="$t(t_key + p.t_key + 'desc')" />
                 <div class="text-black mb-1 mt-5">
@@ -116,5 +116,16 @@ export default {
 <style lang="scss">
 .project strong {
     color: $success !important;
+
+    .project-body {
+        padding-left: 2rem;
+    }
+
+    @include media-breakpoint-down(sm) {
+        .project-body {
+            padding: 0;
+        }
+    }
 }
+
 </style>

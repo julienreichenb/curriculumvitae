@@ -22,8 +22,8 @@
                 sm="12"
             >
                 <b-row class="vertical-center no-gutters text-center header-info p-2 mx-2 info-label">
-                    <b-col xl="12" md="12" sm="3">
-                        <font-awesome-layers class="fa-2x">
+                    <b-col xl="12" md="12" sm="3" class="mb-xl-3">
+                        <font-awesome-layers class="fa-3x">
                             <font-awesome-icon
                                 :icon="info.icon" 
                                 color="white"
@@ -129,7 +129,7 @@ export default {
             font-size: 1.2rem;
 
             svg {
-                font-size: 3rem;
+                font-size: 2rem;
             }
         }    
     }

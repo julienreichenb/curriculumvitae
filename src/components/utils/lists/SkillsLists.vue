@@ -1,8 +1,8 @@
 <template>
     <div>
-        <b-row>
+        <b-row class="skill-list">
             <b-col class="text-left px-5 my-3"
-                lg="12" xl="6"
+                md="6"
                 v-for="item in orderBy(list, 'level', -1)" 
                 :key="item.label + item.id"
             >
@@ -54,10 +54,14 @@ export default {
         generateTooltipLabel(item) {
             return this.tkey[0] + this.tkey[1] + item.label.toLowerCase().replace(/\s/g, '')
         }
-    }
+    },
 }
 </script>
 
-<style scoped lang="scss">
-
+<style lang="scss">
+@include media-breakpoint-down(lg) {
+    .skill-list {
+        margin-top: 1rem;
+    }
+}
 </style>

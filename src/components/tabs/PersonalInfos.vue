@@ -8,10 +8,10 @@
                     v-for="info in infos.values" 
                     :key="info.id"
                 >
-                    <b-row class="vertical-center"
+                    <b-row class="vertical-center pl-md-4 info-row"
                         :id="info.tooltip && 'tooltip-birthday'"
                     >
-                        <b-col lg="4" md="2" sm="4">
+                        <b-col lg="4" md="2" sm="12">
                             <font-awesome-layers class="fa-2x">
                                 <font-awesome-icon
                                     :icon="info.icon" 
@@ -19,7 +19,8 @@
                                 />
                             </font-awesome-layers>                
                         </b-col>
-                        <b-col lg="8" md="10" sm="8" class="text-left">
+                        <b-col class="text-left info-col"
+                            lg="8" md="10" sm="12">
                             <div>{{ $t(t_key + infos.t_key + info.label) }}</div>
                             <h6 class="font-weight-bold">
                                 {{ info.value[0] }}
@@ -30,7 +31,7 @@
                 </b-col>
             </b-row>
             <b-row class="mt-5">
-                <b-col lg="3">
+                <b-col lg="3 perso-list-xl">
                     <PersonalInfoLists :color="color" :list="contact.values.pro" />
                     <PersonalInfoLists :color="color" :list="contact.values.games" />
                     <PersonalInfoLists :color="color" :list="contact.values.others" />
@@ -51,6 +52,11 @@
                             />
                         </b-card-body>
                     </b-card>
+                </b-col>
+                <b-col lg="3 perso-list-md">
+                    <PersonalInfoLists :color="color" :list="contact.values.pro" />
+                    <PersonalInfoLists :color="color" :list="contact.values.games" />
+                    <PersonalInfoLists :color="color" :list="contact.values.others" />
                 </b-col>
             </b-row>
         </b-container>
@@ -238,5 +244,36 @@ export default {
     }
 }
 
+.perso-list-md {
+    display: none;
+}
 
+@include media-breakpoint-down(md) {
+    .perso-list-md {
+        display: block;
+        margin-top: 1.8rem;
+    }
+    .perso-list-xl {
+        display: none;
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .info-elem {
+        border-right: none;
+        border-bottom: 1px solid $light;
+
+        .info-row {
+            margin-top: .5rem;
+            padding-bottom: .5rem;
+        }
+
+        .info-col {
+            text-align: center !important;
+        }
+    }
+    .info-elem:last-child {
+        border-bottom: none;
+    }
+}
 </style>

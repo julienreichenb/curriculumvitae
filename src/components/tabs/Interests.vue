@@ -4,6 +4,7 @@
             :tkey="t_key" 
             :item="i" 
             :isEven="i.id % 2 == 0"
+            :isMobile="isMobile"
             v-for="i in interests" 
             :key="i.id"
         />
@@ -23,6 +24,7 @@ export default {
     data() {
         return {
             t_key: 'interests.',
+            isMobile: false,
             interests: [
                 {
                     id: 0,
@@ -39,6 +41,15 @@ export default {
             ],
         }
     },
+    mounted () {
+        this.onResize()
+        window.addEventListener('resize', this.onResize, { passive: true })
+    },
+    methods: {
+        onResize () {
+            this.isMobile = window.innerWidth < 1420
+        }
+    },    
 }
 </script>
 
