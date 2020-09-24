@@ -19,7 +19,7 @@
                     {{ $t('tab.' + tab.label) }}
                 </h5>
             </template>
-            <div id="content">
+            <div class="content">                
                 <PersonalInfos :color="tabs[current].color" :bootstrap="tabs[current].bootstrap" v-if="current === 0" />
                 <Education :color="tabs[current].color" :bootstrap="tabs[current].bootstrap" v-else-if="current === 1" />
                 <Experience :color="tabs[current].color" :bootstrap="tabs[current].bootstrap" v-else-if="current === 2" />
@@ -126,7 +126,7 @@ export default {
 a.active * {
     font-weight: bolder;
 }
-#content {
+.content {
     padding: 2em 7rem;
     min-height: 85vh;
 

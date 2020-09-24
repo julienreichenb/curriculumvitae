@@ -6,6 +6,7 @@
             class="py-4 border-top project"
             v-for="p in projects" 
             :key="p.id"
+            v-view
         >
             <b-col lg="4" class="project-title">
                 <div class="d-flex justify-content-between">
@@ -126,6 +127,16 @@ export default {
             padding: 0;
         }
     }
+}
+
+.project:nth-child(even).view-in {
+    left: -100em;
+    transform: translateX(100em);
+    transition: .4s;
+}
+
+.project:nth-child(odd).view-in {
+    transition: .4s;
 }
 
 </style>

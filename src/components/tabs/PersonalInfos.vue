@@ -36,23 +36,24 @@
                     <PersonalInfoLists :color="color" :list="contact.values.games" />
                     <PersonalInfoLists :color="color" :list="contact.values.others" />
                 </b-col>
-                <b-col lg="9" class="pl-5">
-                    <b-card 
-                        :img-src="picCard"
-                        img-alt="Card Image"                    
-                        no-body
-                    >           
-                        <b-card-body>
-                            <h3 class="pb-2 mb-2 border-bottom">{{ $t(t_key + presentation.key + 'title') }}</h3>
-                            <b-card-text 
-                                id="card-presentation"
-                                v-for="p in presentation.p" 
-                                :key="p"
-                                v-html="$t(t_key + presentation.key + p)"
-                            />
-                        </b-card-body>
-                    </b-card>
-                </b-col>
+                    <b-col lg="9" class="pl-5">
+                        <b-card 
+                            :img-src="picCard"
+                            img-alt="Card Image"                    
+                            no-body   
+                            v-view                         
+                        >           
+                            <b-card-body>
+                                <h3 class="pb-2 mb-2 border-bottom">{{ $t(t_key + presentation.key + 'title') }}</h3>
+                                <b-card-text 
+                                    id="card-presentation"
+                                    v-for="p in presentation.p" 
+                                    :key="p"
+                                    v-html="$t(t_key + presentation.key + p)"
+                                />
+                            </b-card-body>
+                        </b-card>
+                    </b-col>
                 <b-col lg="3 perso-list-md">
                     <PersonalInfoLists :color="color" :list="contact.values.pro" />
                     <PersonalInfoLists :color="color" :list="contact.values.games" />
@@ -119,6 +120,7 @@ export default {
             countDown: null,
             birthdate: new Date(1992, 4, 15),
             nextBirthday: moment(new Date().getFullYear() + 1 + '-05-15'),
+            showCard: false,
             picCard: null,
             infos: {
                 t_key: 'info.',
@@ -209,6 +211,11 @@ export default {
             presentation: {
                 key: 'who_am_i.',
                 p: ['general', 'college', 'hes', 'next'],
+            },
+            intersectionOptions: {
+                root: null,
+                rootMargin: '0px 0px 0px 0px',
+                threshold: [0, 1],
             }
         }
     },

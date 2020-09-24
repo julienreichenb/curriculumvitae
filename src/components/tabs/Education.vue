@@ -23,7 +23,7 @@
                         </b-badge>
                     </div>
                 </template>
-                <DiplomsLists :class="isMobile && 'mt-5'" :list="diplomas" :tkey="t_key" :isMobile="isMobile" />
+                <DiplomsLists :class="isMobile && 'mt-5'" :list="diplomas" :tkey="t_key" :isMobile="isMobile" :show-list="showList" />
             </b-tab>
             <b-tab class="px-5">
                 <template v-slot:title>
@@ -65,6 +65,7 @@ export default {
         return {
             t_key: 'education.',
             isMobile: false,
+            showList: false,
             current: 0,
             diplomas: [
                 {

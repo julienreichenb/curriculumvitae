@@ -1,10 +1,11 @@
 <template>
     <div>
         <b-row class="skill-list">
-            <b-col class="text-left px-5 my-3"
+            <b-col class="text-left px-5 my-3 skill-item"
                 md="6"
                 v-for="item in orderBy(list, 'level', -1)" 
                 :key="item.label + item.id"
+                v-view
             >
                 <div class="d-flex justify-content-between">
                     <h5 v-if="item.icon">
@@ -63,5 +64,12 @@ export default {
     .skill-list {
         margin-top: 1rem;
     }
+}
+
+
+.skill-item.view-in {
+    transition: .8s;
+    transform: none;
+    right: 0;
 }
 </style>

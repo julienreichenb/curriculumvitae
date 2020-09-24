@@ -17,7 +17,8 @@ import { fab } from '@fortawesome/free-brands-svg-icons'
 import { far } from '@fortawesome/pro-regular-svg-icons'
 import { fad } from '@fortawesome/pro-duotone-svg-icons'
 import { fal } from '@fortawesome/pro-light-svg-icons'
-
+import checkView from 'vue-check-view'
+Vue.use(checkView)
 library.add(fas)
 library.add(fab)
 library.add(far)

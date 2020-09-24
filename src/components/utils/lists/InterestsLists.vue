@@ -6,6 +6,7 @@
         :img-right="!isMobile ? (!isEven ? true : false) : false"
         :img-height="isMobile ? '150' : '350'"
         no-body
+        v-view
     >
         <b-card-body>
             <h3 class="pb-3 border-bottom">{{ $t(tkey + item.t_key + 'title') }}</h3>
@@ -28,5 +29,10 @@ export default {
 <style lang="scss">
 .interest-card img {
     object-fit: cover;
+}
+
+.interest-card:nth-child(even).view-in {
+    left: -100em;
+    transform: translateX(100em);
 }
 </style>

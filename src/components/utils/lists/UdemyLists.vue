@@ -13,6 +13,7 @@
         <b-row class="my-5 pt-5 border-top"
             v-for="d in list" 
             :key="d.id" 
+            v-view
         >
             <b-col md="3" class="pr-3 text-center">
                 <h4 class="font-weight-bold">

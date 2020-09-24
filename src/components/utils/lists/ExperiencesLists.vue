@@ -3,6 +3,7 @@
         <b-row class="my-4 pb-4 border-bottom"
             v-for="e in list" 
             :key="e.id" 
+            v-view
         >
             <b-col v-if="isMobile" sm="12">
                 <b-row >
