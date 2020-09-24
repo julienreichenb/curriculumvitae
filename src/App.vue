@@ -122,9 +122,9 @@ html {
   width: inherit;
   position: relative;
   opacity: 1;
-  transition: 1s;
-  right: -100em;
-  transform: translateX(-100em);
+  transition: .7s;
+  right: -70em;
+  transform: translateX(-70em);
 }
 
 .view-out {
